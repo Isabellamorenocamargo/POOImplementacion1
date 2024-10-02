@@ -4,6 +4,7 @@
  */
 package core;
 
+import core.pedido.Pedido;
 import java.util.ArrayList;
 
 /**
@@ -11,14 +12,27 @@ import java.util.ArrayList;
  * @author isabe
  */
 public class Cliente {
+
     private String nombre;
     private ArrayList<Pedido> pedidos;
 
     public Cliente(String nombre) {
         this.nombre = nombre;
+        this.pedidos = new ArrayList<>();
+    }
+
+    public boolean addPedido(Pedido pedido) {
+        this.pedidos.add(pedido);
+        return true;
+    }
+
+    public String getNombre() {
+        return nombre;
     }
     
-    public boolean addPedido(Pedido pedido){
-      return true;
+
+     public ArrayList<Pedido> getPedido(Cliente cliente) {
+        return this.pedidos;
     }
-}
+    
+} 

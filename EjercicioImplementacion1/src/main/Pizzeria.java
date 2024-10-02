@@ -6,7 +6,7 @@ package main;
 
 import core.Cliente;
 import core.Item;
-import core.Pedido;
+import core.pedido.Pedido;
 import java.util.ArrayList;
 
 /**
@@ -14,42 +14,44 @@ import java.util.ArrayList;
  * @author isabe
  */
 public class Pizzeria {
-    
+
     private String nombre;
     private ArrayList<Cliente> clientes;
     private ArrayList<Item> items;
     private ArrayList<Pedido> pedidos;
 
     public Pizzeria() {
+        this.clientes = new ArrayList<>();
+        this.items = new ArrayList<>();
+        this.pedidos = new ArrayList<>();
     }
 
-   
-    
-    public void  addCliente(Cliente cliente){
-    
+    public void addCliente(Cliente cliente) {
+        clientes.add(cliente);
+
+    }
+
+    public void addItem(Item item) {
+        this.items.add(item);
+    }
+
+    public boolean addPedido(Pedido pedido) {
+        this.pedidos.add(pedido);
+        return true;
+    }
+
+    public Cliente getCliente(int index) {
+        return clientes.get(index);
+
+    }
+
+    public Item getItem(int index) {
+        return items.get(index);
     }
     
-    public void addItem(Item item){
-        
-    }
-    
-    public boolean addPedido(Pedido pedido){
-        return false;
-    }
-    
-    public Cliente getCliente (int index){
-        return null;
-    }
-    
-    
-    public Item getItem(int index){
-        return null;
-    }
-    
-    public int calcProdMasVendidoCliente(int numCliente){
-        
+
+    public int calcProdMasVendidoCliente(int numCliente) {
         return 0;
-        
     }
-}
 
+}

@@ -1,12 +1,13 @@
+
 import core.Cliente;
 import core.Item;
-import core.PedidoOnLine;
-import core.PedidoTelefono;
+import core.pedido.PedidoOnLine;
+import core.pedido.PedidoTelefono;
 import java.util.ArrayList;
 import main.Pizzeria;
 
 public class Main1 {
-    
+
     public static void main(String[] args) {
         // Variables de apoyo
         ArrayList<Item> itemsTemp = new ArrayList<>();
@@ -27,7 +28,7 @@ public class Main1 {
         pizzeria.addCliente(new Cliente("Carolina"));
         pizzeria.addCliente(new Cliente("Lina"));
         pizzeria.addCliente(new Cliente("Ana"));
-        
+
         // Creando pedidos
         // Pedido 1
         itemsTemp.add(pizzeria.getItem(0));
@@ -126,7 +127,7 @@ public class Main1 {
             }
         }
     }
-    
+
 }
 
 /**

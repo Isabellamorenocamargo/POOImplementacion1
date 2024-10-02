@@ -2,8 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package core;
+package core.pedido;
 
+import core.Cliente;
+import core.Item;
 import java.util.ArrayList;
 
 /**
@@ -17,9 +19,9 @@ public abstract class Pedido {
 
     public Pedido(Cliente cliente, ArrayList<Item> items) {
         this.cliente = cliente;
-        this.items = items;
+        this.items = new ArrayList<>();
     }
 
-   
+  
     
 }

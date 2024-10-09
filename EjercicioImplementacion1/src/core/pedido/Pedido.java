@@ -19,9 +19,18 @@ public abstract class Pedido {
 
     public Pedido(Cliente cliente, ArrayList<Item> items) {
         this.cliente = cliente;
-        this.items = new ArrayList<>();
+        this.items = items;
     }
 
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public ArrayList<Item> getItems() {
+        return items;
+    }
+
+  
   
     
 }

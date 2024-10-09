@@ -22,17 +22,19 @@ public class Cliente {
     }
 
     public boolean addPedido(Pedido pedido) {
-        this.pedidos.add(pedido);
-        return true;
+        if (!this.pedidos.contains(pedido)) {
+            this.pedidos.add(pedido);
+            return true;
+        }
+        return false;
     }
 
     public String getNombre() {
         return nombre;
     }
-    
 
-     public ArrayList<Pedido> getPedido(Cliente cliente) {
-        return this.pedidos;
+    public ArrayList<Pedido> getPedidos() {
+        return pedidos;
     }
-    
-} 
+
+}

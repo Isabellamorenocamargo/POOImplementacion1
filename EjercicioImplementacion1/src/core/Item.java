@@ -18,6 +18,10 @@ public class Item {
         this.nombre = nombre;
         this.valor = valor;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
     
     
     

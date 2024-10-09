@@ -1,10 +1,11 @@
+package main;
+
 
 import core.Cliente;
 import core.Item;
 import core.pedido.PedidoOnLine;
 import core.pedido.PedidoTelefono;
 import java.util.ArrayList;
-import main.Pizzeria;
 
 public class Main1 {
 
@@ -121,7 +122,7 @@ public class Main1 {
         for (int numCliente = 0; numCliente < 5; numCliente++) {
             int numProducto = pizzeria.calcProdMasVendidoCliente(numCliente);
             if (numProducto != -1) {
-                System.out.println("El producto más vendido del cliente " + pizzeria.getCliente(numCliente).getNombre() + ": " + pizzeria.getItem(numProducto).getNombre() + "\n");
+                System.out.println("El producto mas vendido del cliente " + pizzeria.getCliente(numCliente).getNombre() + ": " + pizzeria.getItem(numProducto).getNombre() + "\n");
             } else {
                 System.out.println("El cliente " + pizzeria.getCliente(numCliente).getNombre() + " no tiene productos\n");
             }

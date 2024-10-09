@@ -12,17 +12,13 @@ import java.util.ArrayList;
  *
  * @author isabe
  */
-public class PedidoOnLine extends Pedido{
-    
+public class PedidoOnLine extends Pedido {
+
     private String email;
 
     public PedidoOnLine(Cliente cliente,String email, ArrayList<Item> items) {
         super(cliente, items);
-        this.email=email;
-        
+       this.email= email;
     }
-
-   
-    
-    
+  
 }
